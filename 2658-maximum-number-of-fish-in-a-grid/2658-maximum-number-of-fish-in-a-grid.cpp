@@ -2,7 +2,7 @@ class Solution {
 public:
     const int directions[4][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
     int dfs(int r, int c, vector<vector<int>>& grid, vector<vector<bool>>& visited) {
-        if (r < 0 || r >= grid.size() || c < 0 || c >= grid.size() || visited[r][c] || grid[r][c] == 0) {
+        if (r < 0 || r >= grid.size() || c < 0 || c >= grid[0].size() || visited[r][c] || grid[r][c] == 0) {
             return 0;
         }
         visited[r][c] = true;
